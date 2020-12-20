@@ -8,6 +8,11 @@ class Person extends Component {
         <h3>{this.props.name}</h3>
         <p>Your name: {this.props.age || Math.ceil(Math.random() * 100)}</p>
         {this.props.children}
+        <input
+          type="text"
+          onChange={this.props.onChange}
+          placeholder={this.props.name}
+        />
       </div>
     );
   }
