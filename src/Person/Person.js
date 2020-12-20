@@ -7,6 +7,7 @@ class Person extends Component {
       <div className="Person">
         <h3>{this.props.name}</h3>
         <p>Your name: {this.props.age || Math.ceil(Math.random() * 100)}</p>
+        {this.props.children}
       </div>
     );
   }
