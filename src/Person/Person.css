@@ -8,5 +8,7 @@
   background-color: rgb(235, 235, 235);
   margin: 0.5rem;
 
+  box-shadow: 0 2px 3px #ccc;
+
   text-align: center;
 }

@@ -7,17 +7,19 @@ class App extends Component {
   state = { name: "Max", age: 23 };
 
   switchNameHandler = _.debounce((event) => {
+    console.log(event, event.target.value);
     this.setState({ name: event.target.value });
-  }, 300);
+  }, 100);
 
   render() {
+    const { age, ...noAge } = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <h1>Hi, I'm a React app</h1>
           <Person {...this.state} onChange={this.switchNameHandler} />
-          <Person name="Foo" age="45" />
-          <Person name="Bar"></Person>
+          <Person {...this.state} age="45" />
+          <Person {...noAge}></Person>
         </header>
       </div>
     );
