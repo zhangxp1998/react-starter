@@ -2,7 +2,7 @@ import { Component } from "react";
 import React from "react";
 import "./Person.css";
 
-class Person extends Component {
+class Person extends Component<{name: string, age: number, onChange: (a: any) => void}> {
   state = { show: true };
   render() {
     return (
